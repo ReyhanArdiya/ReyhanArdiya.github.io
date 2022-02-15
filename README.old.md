@@ -1,1 +1,0 @@
-# ReyhanArdiya.github.io
