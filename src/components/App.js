@@ -3,12 +3,12 @@ import "./common.css";
 import Navbar from "./Navbar/Navbar.js";
 
 const App = () => {
-	  return (
-		  <div className="App">
-			<Navbar />
+	return (
+		<div className="App">
+			<Navbar>HOME EXPERIENCES CONTACTS CV</Navbar>
 
-		  </div>
-	  );
+		</div>
+	);
 };
 
 export default App;

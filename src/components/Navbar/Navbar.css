@@ -1,0 +1,21 @@
+#navbar {
+	align-items: center;
+	column-gap: 2em;
+	display: flex;
+	font-size: 1em;
+	grid-area: navbar;
+	justify-content: flex-end;
+	padding: 1.5em 0;
+	padding-right: 1.25em;
+	width: 100%;
+}
+
+.navbar-link {
+	color: var(--color-text-1);
+	font-family: "Archivo Black";
+	text-align: center;
+}
+
+.navbar-link-active {
+	color: var(--color-primary-1);
+}
