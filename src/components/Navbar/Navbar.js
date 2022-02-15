@@ -3,18 +3,16 @@ import PropTypes from "prop-types";
 import { useState } from "react";
 
 const Navbar = props => {
-	let { navbarLinks } = props;
-	console.log(navbarLinks);
+	const [ activeLink, setActiveLink ] = useState(0);
 
-	const [ activeLink, /* setActiveLink */ ] = useState(0);
-
-	navbarLinks = navbarLinks.map((navbarLink, i) => {
+	const navbarLinks = props.navbarLinks.map((navbarLink, i) => {
 		const { link, text } = navbarLink;
 
 		return (
 			<a
 				key={`navbar-link-${i}`}
-				className={`navbar-link ${activeLink === i && "navbar-link-active"}`}
+				data-which={i}
+				className={`navbar-link ${activeLink === i ? "navbar-link-active" : ""}`}
 				href={link}
 			>
 				{text}
@@ -23,7 +21,9 @@ const Navbar = props => {
 	});
 
 	const handleLinkClick = e => {
-		console.log(e);
+		if (e.target.classList.contains("navbar-link")) {
+			setActiveLink(+e.target.dataset.which);
+		}
 	};
 
 	return (
