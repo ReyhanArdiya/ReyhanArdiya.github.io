@@ -3,26 +3,41 @@ import PropTypes from "prop-types";
 import { useState } from "react";
 
 const Navbar = props => {
-	const links = props.children.split(" ");
-	console.log(links);
+	let { navbarLinks } = props;
+	console.log(navbarLinks);
 
 	const [ activeLink, /* setActiveLink */ ] = useState(0);
 
-	const navbarLinks = links.map((link, i) => {
+	navbarLinks = navbarLinks.map((navbarLink, i) => {
+		const { link, text } = navbarLink;
+
 		return (
-			<p key={`navbar-link-${i}`} className={`navbar-link ${activeLink === i && "navbar-link-active"}`}>
-				{link}
-			</p>
+			<a
+				key={`navbar-link-${i}`}
+				className={`navbar-link ${activeLink === i && "navbar-link-active"}`}
+				href={link}
+			>
+				{text}
+			</a>
 		);
 	});
 
+	const handleLinkClick = e => {
+		console.log(e);
+	};
+
 	return (
-		<nav id="navbar">
+		<nav id="navbar" onClick={handleLinkClick}>
 			{navbarLinks}
 		</nav>
 	);
 };
 
-Navbar.propTypes = { children : PropTypes.string.isRequired };
+Navbar.propTypes = {
+	navbarLinks : PropTypes.arrayOf(PropTypes.shape({
+		link : PropTypes.string.isRequired,
+		text : PropTypes.string.isRequired,
+	})).isRequired
+};
 
 export default Navbar;

@@ -2,10 +2,29 @@ import "./App.css";
 import "./common.css";
 import Navbar from "./Navbar/Navbar.js";
 
+const navbarLinks = [
+	{
+		link : "#intro",
+		text : "HOME"
+	},
+	{
+		link : "#learned",
+		text : "EXPERIENCES"
+	},
+	{
+		link : "#contacts",
+		text : "CONTACTS"
+	},
+	{
+		link : "#CV",
+		text : "CV"
+	}
+];
 const App = () => {
+
 	return (
 		<div className="App">
-			<Navbar>HOME EXPERIENCES CONTACTS CV</Navbar>
+			<Navbar navbarLinks={navbarLinks}></Navbar>
 
 		</div>
 	);
