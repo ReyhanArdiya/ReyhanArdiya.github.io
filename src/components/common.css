@@ -1,0 +1,46 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Archivo+Black&family=Archivo+Narrow&display=swap");
+
+/* Variables */
+:root {
+	--color-primary-1: #ee2b47;
+	--color-primary-2: #34374c;
+	--color-primary-3: #2c2e3e;
+
+	--color-accent-1: #f6f6f6;
+
+	--color-text-1: #000000;
+	--color-text-2: #00000021;
+}
+
+/* Text styles */
+.text-title {
+	color: var(--color-primary-2);
+	font-family: "Alfa Slab One";
+	font-style: normal;
+	font-weight: normal;
+	letter-spacing: 0.3em;
+}
+
+.text-subtitle {
+	color: var(--color-text-2);
+	font-family: "Archivo Black";
+	font-style: normal;
+	font-weight: normal;
+}
+
+.text-paragraph {
+	color: var(--color-accent-1);
+	font-family: "Archivo Narrow";
+	font-style: normal;
+	font-weight: 400;
+}
+
+/* Icon Shadows */
+.shadows-icon-tech-1 {
+	box-shadow: -1px 1px 0px var(--color-primary-2);
+}
+
+.shadows-icon-tech-2 {
+	box-shadow: -1px 1px 0px var(--color-primary-3);
+}
