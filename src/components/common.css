@@ -22,7 +22,7 @@
 }
 
 .text-subtitle {
-	color: var(--color-text-2);
+	color: var(--color-text-1);
 	font-family: "Archivo Black";
 	font-weight: 400;
 }
