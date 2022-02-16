@@ -14,7 +14,7 @@
 		"projects"
 		"contacts";
 	/* CMT use this for spacing between elements instead of margin */
-	/* row-gap: 25px; */
-	min-width: 320px;
+	row-gap: 25px;
+	justify-items: center;
 	min-height: 640px;
 }
