@@ -7,6 +7,8 @@
 	justify-content: flex-end;
 	padding: 1.5em 1.25em;
 	width: 100%;
+	position: fixed;
+	/* CMT should i add a gradient shadow for the navbar background? */
 }
 
 .navbar-link {
