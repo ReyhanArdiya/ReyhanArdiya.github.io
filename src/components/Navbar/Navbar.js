@@ -10,7 +10,7 @@ const Navbar = props => {
 
 		return (
 			<a
-				key={`navbar-link-${i}`}
+				key={`navbar-link-${Math.random() * 101}`}
 				data-which={i}
 				className={`navbar-link ${activeLink === i ? "navbar-link-active" : ""}`}
 				href={link}
