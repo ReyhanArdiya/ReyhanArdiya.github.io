@@ -1,3 +1,29 @@
 #intro {
 	grid-area: intro;
+	margin-top: 1em;
+	display: grid;
+	grid-template-rows: 0.5fr 1fr 0.5fr;
+	width: min-content;
+	font-size: 12vw;
+}
+
+#intro .text-subtitle {
+	color: var(--color-text-1);
+	font-size: 0.5em;
+}
+
+#intro .text-subtitle:nth-of-type(1) {
+	text-align: left;
+}
+
+#intro .text-title {
+	font-size: 1em;
+}
+
+#intro .text-title span:nth-of-type(2) {
+	color: var(--color-primary-1);
+}
+
+#intro .text-subtitle:nth-of-type(2) {
+	text-align: right;
 }
