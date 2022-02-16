@@ -17,6 +17,7 @@
 	text-align: center;
 	cursor: pointer;
 	text-decoration: none;
+	-webkit-tap-highlight-color: transparent;
 }
 
 .navbar-link-active {
