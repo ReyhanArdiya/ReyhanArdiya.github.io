@@ -1,5 +1,6 @@
 import "./App.css";
 import "./common.css";
+import Intro from "./Intro/Intro.js";
 import Navbar from "./Navbar/Navbar.js";
 import { useState } from "react";
 
@@ -81,7 +82,7 @@ const App = () => {
 	return (
 		<div className="App">
 			<Navbar colorPallete={colorPallete} navbarLinks={navbarLinks} />
-
+			<Intro />
 		</div>
 	);
 };
