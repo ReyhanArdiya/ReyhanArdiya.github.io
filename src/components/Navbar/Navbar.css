@@ -5,8 +5,7 @@
 	font-size: 0.5em;
 	grid-area: navbar;
 	justify-content: flex-end;
-	padding: 1.5em 0;
-	padding-right: 1.25em;
+	padding: 1.5em 1.25em;
 	width: 100%;
 }
 
