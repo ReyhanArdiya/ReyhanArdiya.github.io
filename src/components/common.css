@@ -17,22 +17,19 @@
 .text-title {
 	color: var(--color-primary-2);
 	font-family: "Alfa Slab One";
-	font-style: normal;
-	font-weight: normal;
 	letter-spacing: 0.3em;
+	font-weight: 400;
 }
 
 .text-subtitle {
 	color: var(--color-text-2);
 	font-family: "Archivo Black";
-	font-style: normal;
-	font-weight: normal;
+	font-weight: 400;
 }
 
 .text-paragraph {
 	color: var(--color-accent-1);
 	font-family: "Archivo Narrow";
-	font-style: normal;
 	font-weight: 400;
 }
 

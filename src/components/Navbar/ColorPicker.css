@@ -1,0 +1,18 @@
+#color-picker {
+	width: 100%;
+	align-items: center;
+	display: flex;
+	justify-content: flex-start;
+	column-gap: 0.65em;
+	font-size: 1em;
+}
+
+.color-picker-item {
+	width: 1.25em;
+	height: 1.25em;
+	background: red;
+}
+
+.color-picker-item + input[id^="color-input"] {
+	display: none;
+}

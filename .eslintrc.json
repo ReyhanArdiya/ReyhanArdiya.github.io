@@ -222,6 +222,7 @@
 		"prefer-template": "warn",
 		"quotes": ["warn", "double"],
 		"rest-spread-spacing": ["error", "never"],
+		"react/prop-types": "warn",
 		"semi": "error",
 		"semi-spacing": "error",
 		"semi-style": "error",

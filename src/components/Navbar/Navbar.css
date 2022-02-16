@@ -1,0 +1,36 @@
+#navbar {
+	align-items: center;
+	column-gap: 2em;
+	display: flex;
+	font-size: 0.5em;
+	grid-area: navbar;
+	justify-content: flex-end;
+	padding: 1.5em 1.25em;
+	width: 100%;
+	position: fixed;
+	/* CMT should i add a gradient shadow for the navbar background? */
+}
+
+.navbar-link {
+	color: var(--color-text-1);
+	font-family: "Archivo Black";
+	text-align: center;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.navbar-link-active {
+	color: var(--color-primary-1);
+}
+
+@media screen and (min-width: calc(400em / 16)) {
+	#navbar {
+		font-size: 0.65em;
+	}
+}
+
+@media screen and (min-width: calc(768em / 16)) {
+	#navbar {
+		font-size: 1em;
+	}
+}
