@@ -1,5 +1,5 @@
 import "./Intro.css";
-import BGText from "../common/BGText/BGText.js";
+import BGText from "../../common/BGText/BGText.js";
 
 const Intro = () => {
 	return (

@@ -1,9 +1,9 @@
 import "./App.css";
-import "./common.css";
-import About from "./About/About.js";
-import Intro from "./Intro/Intro.js";
-import Motto from "./Motto/Motto.js";
-import Navbar from "./Navbar/Navbar.js";
+import "./common/common.css";
+import About from "./main/About/About.js";
+import Intro from "./main/Intro/Intro.js";
+import Motto from "./main/Motto/Motto.js";
+import Navbar from "./main/Navbar/Navbar.js";
 
 const navbarLinks = [
 	{
