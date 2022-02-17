@@ -1,5 +1,5 @@
 import "./About.css";
-import BGText from "../BGText/BGText.js";
+import BGText from "../common/BGText/BGText.js";
 
 const About = () => {
 	return (
