@@ -6,7 +6,7 @@
 	align-items: center;
 	font-size: 0.875em;
 	height: 5.25em;
-	padding-right: 0.3em;
+	padding-right: 0.8em;
 	position: relative;
 	overflow: hidden;
 }
@@ -35,7 +35,7 @@
 	row-gap: 0.5em;
 }
 
-#about header {
+#about-header {
 	z-index: 2;
 	align-self: stretch;
 	grid-area: left;
@@ -43,7 +43,7 @@
 	padding: 0 0.55em;
 }
 
-#about h2:first-of-type {
+#about-title-one {
 	grid-area: webdev;
 	color: var(--color-accent-1);
 	text-align: right;
@@ -62,7 +62,7 @@
 	justify-content: flex-end;
 }
 
-#about h2:last-of-type {
+#about-title-two {
 	grid-area: training;
 	align-items: center;
 	display: flex;
