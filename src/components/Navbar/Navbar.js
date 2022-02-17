@@ -30,17 +30,13 @@ const Navbar = props => {
 
 	return (
 		<nav id="navbar" onClick={handleLinkClick}>
-			<ColorPicker colorPallete={props.colorPallete} />
+			<ColorPicker />
 			{navbarLinks}
 		</nav>
 	);
 };
 
 Navbar.propTypes = {
-	colorPallete : PropTypes.arrayOf(PropTypes.shape({
-		setter : PropTypes.func,
-		val    : PropTypes.string
-	})),
 	navbarLinks : PropTypes.arrayOf(PropTypes.shape({
 		link : PropTypes.string.isRequired,
 		text : PropTypes.string.isRequired,

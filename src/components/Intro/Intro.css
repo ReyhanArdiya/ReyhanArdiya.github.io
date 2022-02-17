@@ -1,0 +1,45 @@
+#intro {
+	--subtitle-alignment: -0.4em;
+	grid-area: intro;
+	margin-top: 1em;
+	display: grid;
+	grid-template-rows: 0.5fr 1fr 0.5fr;
+	row-gap: 0.1em;
+	width: min-content;
+	font-size: 12vw;
+}
+
+#intro .text-subtitle {
+	font-size: 0.32em;
+}
+
+#intro .text-subtitle:nth-of-type(1) {
+	text-align: left;
+	position: relative;
+	left: var(--subtitle-alignment);
+}
+
+#intro .text-title {
+	position: relative;
+	font-size: 1em;
+	/* Opposite of the text-title's letter spacing to remove space on last letter  */
+	margin-right: -0.3em;
+}
+
+#intro .BGT {
+	font-size: 0.317em;
+	position: absolute;
+	top: -0.6em;
+	left: var(--subtitle-alignment);
+	letter-spacing: 0;
+}
+
+#intro .text-title h1 span:nth-of-type(2) {
+	color: var(--color-primary-1);
+}
+
+#intro .text-subtitle:nth-of-type(2) {
+	text-align: right;
+	position: relative;
+	right: var(--subtitle-alignment);
+}

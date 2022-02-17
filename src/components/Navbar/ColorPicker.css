@@ -11,6 +11,7 @@
 	width: 1.25em;
 	height: 1.25em;
 	background: red;
+	cursor: pointer;
 }
 
 .color-picker-item + input[id^="color-input"] {
