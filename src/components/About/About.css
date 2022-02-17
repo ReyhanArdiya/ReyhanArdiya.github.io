@@ -8,6 +8,7 @@
 	height: 5.25em;
 	padding-right: 0.3em;
 	position: relative;
+	overflow: hidden;
 }
 
 #about .BGT {
