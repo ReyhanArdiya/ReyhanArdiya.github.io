@@ -1,0 +1,15 @@
+#motto {
+	grid-area: motto;
+	font-size: 11.25vw;
+}
+
+#motto .text-subtitle {
+	font-size: 0.335em;
+}
+
+#motto-text h3 {
+	font-size: 0.665em;
+}
+#motto-text h3 span {
+	color: var(--color-primary-1);
+}
