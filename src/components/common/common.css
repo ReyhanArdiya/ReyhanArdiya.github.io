@@ -1,7 +1,7 @@
 /* Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Archivo+Black&family=Archivo+Narrow&display=swap");
 
-/* Variables */
+/* Variables. Note that if I want to change this to use css-in-js only i probs have to change the color picker logic too :) */
 :root {
 	--color-primary-1: #ee2b47;
 	--color-primary-2: #34374c;
