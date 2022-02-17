@@ -19,9 +19,11 @@
 
 /* Text styles */
 .text-title {
+	--letter-spacing-space: 0.3em;
 	color: var(--color-primary-2);
 	font-family: "Alfa Slab One";
-	letter-spacing: 0.3em;
+	letter-spacing: var(--letter-spacing-space);
+	margin-right: calc(-1 * var(--letter-spacing-space));
 	font-weight: 400;
 }
 
