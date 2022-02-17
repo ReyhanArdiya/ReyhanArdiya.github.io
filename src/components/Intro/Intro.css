@@ -1,5 +1,5 @@
 #intro {
-	--subtitle-alignment: -0.4em;
+	--subtitle-alignment: -0.25em;
 	grid-area: intro;
 	margin-top: 1em;
 	display: grid;
@@ -9,7 +9,7 @@
 	font-size: 1.2em;
 }
 
-#intro .text-subtitle:nth-of-type(1) {
+#intro > .text-subtitle:nth-of-type(1) {
 	text-align: left;
 	position: relative;
 	left: var(--subtitle-alignment);
