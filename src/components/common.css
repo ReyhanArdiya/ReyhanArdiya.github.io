@@ -1,10 +1,6 @@
 /* Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Archivo+Black&family=Archivo+Narrow&display=swap");
 
-:root {
-	font-size: 10vw;
-}
-
 /* Variables */
 :root {
 	--color-primary-1: #ee2b47;
@@ -15,6 +11,10 @@
 
 	--color-text-1: #000000;
 	--color-text-2: #00000021;
+}
+
+:root {
+	font-size: 10vw;
 }
 
 /* Text styles */
