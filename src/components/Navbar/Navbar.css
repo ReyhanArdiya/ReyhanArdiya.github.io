@@ -1,8 +1,10 @@
 #navbar {
+	z-index: 10;
 	align-items: center;
 	column-gap: 2em;
 	display: flex;
-	font-size: 2.5vw;
+	/* 8px */
+	font-size: 0.25em;
 	grid-area: navbar;
 	justify-content: flex-end;
 	padding: 1.5em 1.25em;

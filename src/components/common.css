@@ -13,11 +13,17 @@
 	--color-text-2: #00000021;
 }
 
+:root {
+	font-size: 10vw;
+}
+
 /* Text styles */
 .text-title {
+	--letter-spacing-space: 0.3em;
 	color: var(--color-primary-2);
 	font-family: "Alfa Slab One";
-	letter-spacing: 0.3em;
+	letter-spacing: var(--letter-spacing-space);
+	margin-right: calc(-1 * var(--letter-spacing-space));
 	font-weight: 400;
 }
 
@@ -38,6 +44,7 @@
 	color: var(--color-text-1);
 	font-family: "Archivo Black";
 	font-weight: 400;
+	font-size: 0.375rem;
 }
 
 .text-paragraph {
