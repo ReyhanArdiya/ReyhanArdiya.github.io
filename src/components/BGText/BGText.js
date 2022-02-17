@@ -15,7 +15,7 @@ const BGText = props => {
 		const textCols = [];
 		for (let j = 0; j < cols; j++) {
 			textCols.push(
-				<span className="BGT-text" key={uuidv4()}>
+				<span className="BGT-text text-subtitle" key={uuidv4()}>
 					{text}
 				</span>
 			);
