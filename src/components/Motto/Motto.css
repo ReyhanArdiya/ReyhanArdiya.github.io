@@ -1,6 +1,7 @@
 #motto {
 	grid-area: motto;
-	font-size: 11.25vw;
+	/* 36px */
+	font-size: 1.125em;
 }
 
 #motto .text-subtitle {
