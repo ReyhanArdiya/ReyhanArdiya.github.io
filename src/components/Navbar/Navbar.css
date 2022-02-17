@@ -8,8 +8,13 @@
 	justify-content: flex-end;
 	padding: 1.5em 1.25em;
 	width: 100%;
-	position: fixed;
-	/* CMT should i add a gradient shadow for the navbar background? */
+	/* position: fixed; */
+
+	/* background: linear-gradient(
+		180deg,
+		#ffffff 0%,
+		rgba(255, 255, 255, 0) 100%
+	); */
 }
 
 .navbar-link {

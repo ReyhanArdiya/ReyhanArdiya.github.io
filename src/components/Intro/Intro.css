@@ -1,7 +1,7 @@
 #intro {
 	--subtitle-alignment: -0.25em;
 	grid-area: intro;
-	margin-top: 1em;
+	/* margin-top: 1em; */
 	display: grid;
 	grid-template-rows: 0.5fr 1fr 0.5fr;
 	row-gap: 0.1em;
