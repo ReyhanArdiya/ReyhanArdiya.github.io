@@ -56,7 +56,6 @@
 	bottom: 0.8em;
 	grid-area: in;
 	color: var(--color-accent-1);
-	font-size: 0.43em;
 	align-items: flex-start;
 	display: flex;
 	justify-content: flex-end;
