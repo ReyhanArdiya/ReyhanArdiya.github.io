@@ -3,7 +3,6 @@
 	align-items: center;
 	column-gap: 2em;
 	display: flex;
-	/* 8px */
 	font-size: 0.25em;
 	grid-area: navbar;
 	justify-content: flex-end;
