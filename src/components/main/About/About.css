@@ -1,4 +1,4 @@
-#about {
+/* #about {
 	grid-area: about;
 	background-color: var(--color-primary-1);
 	width: 100%;
@@ -68,4 +68,4 @@
 	display: flex;
 	justify-content: flex-end;
 	text-align: right;
-}
+} */
