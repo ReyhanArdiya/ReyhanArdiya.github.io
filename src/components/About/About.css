@@ -1,0 +1,55 @@
+#about {
+	grid-area: about;
+	background-color: var(--color-primary-1);
+	width: 100%;
+	display: flex;
+	align-items: center;
+	font-size: 8.75vw;
+	height: 5em;
+	padding-right: 0.3em;
+}
+
+#about-text {
+	grid-area: abtxt;
+	display: grid;
+	grid-template-areas:
+		"left webdev webdev"
+		"left in training";
+	font-size: 8.75vw;
+	row-gap: 0.5em;
+}
+
+#about header {
+	align-self: stretch;
+	grid-area: left;
+	font-size: 0.43em;
+	padding: 0 0.55em;
+}
+
+#about h2:first-of-type {
+	grid-area: webdev;
+	color: var(--color-accent-1);
+	text-align: right;
+	align-items: flex-end;
+	display: flex;
+	justify-content: flex-end;
+}
+
+#about small {
+	position: relative;
+	bottom: 0.8em;
+	grid-area: in;
+	color: var(--color-accent-1);
+	font-size: 0.43em;
+	align-items: flex-start;
+	display: flex;
+	justify-content: flex-end;
+}
+
+#about h2:last-of-type {
+	grid-area: training;
+	align-items: center;
+	display: flex;
+	justify-content: flex-end;
+	text-align: right;
+}

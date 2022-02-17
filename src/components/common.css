@@ -21,6 +21,19 @@
 	font-weight: 400;
 }
 
+.text-title-sideways {
+	align-items: center;
+	background-color: var(--color-primary-2);
+	color: var(--color-accent-1);
+	display: flex;
+	font-family: "Archivo Black";
+	font-weight: 400;
+	justify-content: center;
+	min-width: 26px;
+	transform: rotate(180deg);
+	writing-mode: vertical-rl;
+}
+
 .text-subtitle {
 	color: var(--color-text-1);
 	font-family: "Archivo Black";
