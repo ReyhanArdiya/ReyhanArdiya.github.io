@@ -2,6 +2,7 @@ import "./App.css";
 import "./common.css";
 import About from "./About/About.js";
 import Intro from "./Intro/Intro.js";
+import Motto from "./Motto/Motto.js";
 import Navbar from "./Navbar/Navbar.js";
 
 const navbarLinks = [
@@ -29,6 +30,7 @@ const App = () => {
 			<Navbar navbarLinks={navbarLinks} />
 			<Intro />
 			<About />
+			<Motto />
 		</div>
 	);
 };
