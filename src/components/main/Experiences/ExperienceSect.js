@@ -24,6 +24,7 @@ const ExpSectContainer = styled.section`
 		align-self: stretch;
 		font-size: 0.43em;
 		padding: 0 0.55em;
+		flex-shrink: 0;
         ${({ right }) => right && "transform: none;"}
 	}
 
@@ -44,12 +45,14 @@ const ExpSectContainer = styled.section`
 `;
 
 const ExpSectContent = styled.section`
+	z-index: 1;
     display: grid;
     grid-template-areas:
         "subtitle"
         "icons";
     flex-grow: 1;
-    justify-content: flex-start;
+    grid-template-columns: 1fr;
+    justify-items: start;
     font-size: 1em;
     row-gap: 0.36em;
 `;
@@ -60,9 +63,25 @@ const ExpSectSubtitle = styled(Subtitle)`
     font-size: 0.5715em;
 `;
 
+const iconSize = "1.08em";
+
 const ExpSectIcons = styled.article`
     grid-area: icons;
+    display: flex;
     width: 100%;
+    overflow-x: scroll;
+	font-size: 1em;
+	column-gap: 0.715em;
+
+	&::-webkit-scrollbar {
+		display:none;
+	}
+
+    & > * {
+		flex-shrink: 0;
+        height: ${iconSize};
+        width: ${iconSize};
+    }
 `;
 
 const ExperienceSect = ({
@@ -86,10 +105,11 @@ const ExperienceSect = ({
 };
 
 ExperienceSect.propTypes = {
-	BGTTextOne      : PropTypes.string.isRequired,
-	BGTTextTwo      : PropTypes.string.isRequired,
-	children        : PropTypes.arrayOf(PropTypes.string).isRequired,
-	icons           : PropTypes.arrayOf(PropTypes.string).isRequired,
+	BGTTextOne : PropTypes.string.isRequired,
+	BGTTextTwo : PropTypes.string.isRequired,
+
+	/** String array for path to each icon */
+	children        : PropTypes.arrayOf(PropTypes.object).isRequired,
 	sectSubtitle    : PropTypes.string.isRequired,
 	sidewayTitlePos : PropTypes.bool
 };
