@@ -4,18 +4,16 @@ import TitleSideways from "../../common/Text/TitleSideways.js";
 import styled from "styled-components";
 
 const AboutContainer = styled.section`
-	& {
-		grid-area: about;
-		background-color: var(--color-primary-1);
-		width: 100%;
-		display: flex;
-		align-items: center;
-		font-size: 0.875em;
-		height: 5.25em;
-		padding-right: 0.8em;
-		position: relative;
-		overflow: hidden;
-	}
+	grid-area: about;
+	background-color: var(--color-primary-1);
+	width: 100%;
+	display: flex;
+	align-items: center;
+	font-size: 0.875em;
+	height: 5.25em;
+	padding-right: 0.8em;
+	position: relative;
+	overflow: hidden;
 
 	& .BGT {
 		font-size: 0.43em;
@@ -79,7 +77,7 @@ const AboutContainer = styled.section`
 
 const About = () => {
 	return (
-		<AboutContainer>
+		<AboutContainer id="about">
 			<BGText cols={3} rows={3} text="WEB DEVELOPER" />
 			<TitleSideways id="about-header">Who am i</TitleSideways>
 			<section id="about-text">
