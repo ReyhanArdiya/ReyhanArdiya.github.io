@@ -31,7 +31,6 @@ const AboutContainer = styled.section`
 
 	& #about-text {
 		z-index: 1;
-		grid-area: abtxt;
 		display: grid;
 		grid-template-areas:
 			"left webdev webdev"
@@ -42,7 +41,6 @@ const AboutContainer = styled.section`
 	& #about-header {
 		z-index: 2;
 		align-self: stretch;
-		grid-area: left;
 		font-size: 0.43em;
 		padding: 0 0.55em;
 	}
