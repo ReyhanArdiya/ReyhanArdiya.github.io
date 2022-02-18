@@ -1,6 +1,7 @@
 import "./App.css";
 import "./common/common.css";
 import About from "./main/About/About.js";
+import ExperienceSect from "./main/Experiences/ExperienceSect.js";
 import Intro from "./main/Intro/Intro.js";
 import Motto from "./main/Motto/Motto.js";
 import Navbar from "./main/Navbar/Navbar.js";
@@ -31,6 +32,7 @@ const App = () => {
 			<Intro />
 			<About />
 			<Motto />
+			<ExperienceSect BGTTextOne="LEARNED" BGTTextTwo="TECHS" sectSubtitle="And so far I've learned..." >Icons here</ExperienceSect>
 		</div>
 	);
 };
