@@ -52,7 +52,7 @@ const ExpSectContent = styled.section`
         "icons";
     flex-grow: 1;
     grid-template-columns: 1fr;
-    justify-items: start;
+    justify-items: ${({ right }) => right ? "end" : "start"};
     font-size: 1em;
     row-gap: 0.36em;
 `;
@@ -72,6 +72,7 @@ const ExpSectIcons = styled.article`
     overflow-x: scroll;
 	font-size: 1em;
 	column-gap: 0.715em;
+	justify-content: ${({ right }) => right ? "flex-end" : "flex-start"};;
 
 	&::-webkit-scrollbar {
 		display:none;
@@ -89,15 +90,15 @@ const ExperienceSect = ({
 	sectSubtitle,
 	BGTTextOne,
 	BGTTextTwo,
-	sidewayTitlePos = false
+	right = false
 }) => {
 	return (
-		<ExpSectContainer right={sidewayTitlePos}>
+		<ExpSectContainer right={right}>
 			<TitleSideways>Experiences</TitleSideways>
 			<BGText cols={10} rows={2} text={BGTTextOne} />
-			<ExpSectContent>
+			<ExpSectContent right={right}>
 				<ExpSectSubtitle>{sectSubtitle}</ExpSectSubtitle>
-				<ExpSectIcons>{icons}</ExpSectIcons>
+				<ExpSectIcons right={right}>{icons}</ExpSectIcons>
 			</ExpSectContent>
 			<BGText cols={10} rows={2} text={BGTTextTwo}/>
 		</ExpSectContainer>
@@ -109,9 +110,9 @@ ExperienceSect.propTypes = {
 	BGTTextTwo : PropTypes.string.isRequired,
 
 	/** String array for path to each icon */
-	children        : PropTypes.arrayOf(PropTypes.object).isRequired,
-	sectSubtitle    : PropTypes.string.isRequired,
-	sidewayTitlePos : PropTypes.bool
+	children     : PropTypes.arrayOf(PropTypes.object).isRequired,
+	right        : PropTypes.bool,
+	sectSubtitle : PropTypes.string.isRequired,
 };
 
 export default ExperienceSect;
