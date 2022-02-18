@@ -4,7 +4,6 @@ import Subtitle from "../../common/Text/Subtitle.js";
 import TitleSideways from "../../common/Text/TitleSideways.js";
 import styled from "styled-components";
 
-// TODO make two for learned and learning and then combine them into one experiences component and change the App's grid area to it
 const ExpSectContainer = styled.section`
 	align-items: center;
 	background-color: var(--color-primary-1);
@@ -72,7 +71,7 @@ const ExpSectIcons = styled.article`
     overflow-x: scroll;
 	font-size: 1em;
 	column-gap: 0.715em;
-	justify-content: ${({ right }) => right ? "flex-end" : "flex-start"};;
+	${({ right }) => right && "flex-flow: row-reverse;"}
 
 	&::-webkit-scrollbar {
 		display:none;
@@ -86,14 +85,15 @@ const ExpSectIcons = styled.article`
 `;
 
 const ExperienceSect = ({
-	children : icons,
+	children: icons,
+	className,
 	sectSubtitle,
 	BGTTextOne,
 	BGTTextTwo,
 	right = false
 }) => {
 	return (
-		<ExpSectContainer right={right}>
+		<ExpSectContainer className={className} right={right}>
 			<TitleSideways>Experiences</TitleSideways>
 			<BGText cols={10} rows={2} text={BGTTextOne} />
 			<ExpSectContent right={right}>
@@ -111,6 +111,7 @@ ExperienceSect.propTypes = {
 
 	/** String array for path to each icon */
 	children     : PropTypes.arrayOf(PropTypes.object).isRequired,
+	className    : PropTypes.string,
 	right        : PropTypes.bool,
 	sectSubtitle : PropTypes.string.isRequired,
 };
