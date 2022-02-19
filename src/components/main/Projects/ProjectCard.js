@@ -57,6 +57,11 @@ const ProjectTitle = styled(Title)`
     text-align: center;
     width: 100%;
     z-index: 2;
+
+    & a {
+        color: inherit;
+        text-decoration: none;
+    }
 `;
 
 const ProjectDesc = styled(TextP)`
@@ -78,7 +83,9 @@ const ProjectCard = ({ children: desc, BGText, title, iframe }) => {
 			<ProjectIframe src={iframe} title={title} />
 			<ProjectHeader>
 				<ProjectBGT cols={7} rows={5} text={BGText} />
-				<ProjectTitle>{title}</ProjectTitle>
+				<ProjectTitle>
+					<a target={0} href={iframe}>{title}</a>
+				</ProjectTitle>
 			</ProjectHeader>
 			<ProjectDesc>{desc}</ProjectDesc>
 		</ProjectCardContainer>
