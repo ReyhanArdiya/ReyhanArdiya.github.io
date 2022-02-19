@@ -6,6 +6,9 @@ import styled from "styled-components";
 
 const ProjectsContainer = styled.section`
     grid-area: projects;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.875em;
 `;
 
 const ProjectsHeader = styled.header`
