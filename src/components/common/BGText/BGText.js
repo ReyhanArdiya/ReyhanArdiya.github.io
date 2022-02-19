@@ -29,16 +29,17 @@ const BGText = props => {
 	}
 
 	return (
-		<div className="BGT">
+		<div className={`BGT ${props.className}`}>
 			{textRows}
 		</div>
 	);
 };
 
 BGText.propTypes = {
-	cols : PropTypes.number.isRequired,
-	rows : PropTypes.number.isRequired,
-	text : PropTypes.string.isRequired
+	className : PropTypes.string,
+	cols      : PropTypes.number.isRequired,
+	rows      : PropTypes.number.isRequired,
+	text      : PropTypes.string.isRequired
 };
 
 export default BGText;
