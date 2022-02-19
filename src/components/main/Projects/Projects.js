@@ -33,6 +33,8 @@ const ProjectsContent = styled.section`
     grid-auto-rows: 1fr;
     grid-auto-flow: column;
     height: 4.75em;
+    width: 100%;
+    justify-items: center;
 `;
 
 const Projects = () => {
@@ -44,6 +46,7 @@ const Projects = () => {
 			</ProjectsHeader>
 			<ProjectsContent>
 				<Projectcard></Projectcard>
+				{/* <Projectcard></Projectcard> */}
 			</ProjectsContent>
 		</ProjectsContainer>
 	);
