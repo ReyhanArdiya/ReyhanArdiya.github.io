@@ -32,9 +32,13 @@ const ProjectsContent = styled.section`
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: minmax(0px, 1fr);
     grid-auto-flow: column;
-    height: 4.75em;
+    height: max-content;
     width: 100%;
     justify-items: center;
+
+    @media screen and (min-width: calc(768em / 16)) {
+        height: 4.75em;
+    }
 `;
 
 const Projects = () => {
@@ -46,7 +50,7 @@ const Projects = () => {
 			</ProjectsHeader>
 			<ProjectsContent>
 				<ProjectCard iframe="https://reyhanardiya.github.io/role-randomizer/" BGText="Role Randomizer" title="R R">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis, ab, voluptas eveniet earum maiores, consequatur voluptatum expedita impedit officia minima iure quidem aperiam unde adipisci cupiditate porro dolore dolores! Aspernatur.</ProjectCard>
-				<ProjectCard iframe="https://reyhanardiya.github.io/role-randomizer/" BGText="VIXUN" title="VIXUN">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis, ab, voluptas eveniet earum maiores, consequatur voluptatum expedita impedit officia minima iure quidem aperiam unde adipisci cupiditate porro dolore dolores! Aspernatur.</ProjectCard>
+				<ProjectCard iframe="https://reyhanardiya.github.io/role-randomizer/" BGText="VIXUN" title="VIXUN">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis, ab, voluptas eveniet earum maiores, consequatur voluptatum expedita impedit officia minima iure quidem aperiam unde adipisci cupiditate porro dolore dolores! Aspernatur. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni molestias, cum iure laborum, pariatur quisquam neque totam veritatis esse incidunt iste qui dolore facilis nihil commodi, explicabo impedit nulla omnis?</ProjectCard>
 			</ProjectsContent>
 		</ProjectsContainer>
 	);

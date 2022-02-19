@@ -12,7 +12,7 @@ const ProjectCardContainer = styled.article`
         "header"
         "desc";
     grid-template-columns: minmax(0px, 1fr);
-    grid-template-rows: minmax(0px, 0.16fr) minmax(0px, 0.335fr);
+    grid-template-rows: minmax(0px, 0.335fr) minmax(0px, 0.55fr);
 
     @media screen and (min-width: calc(768em / 16)) {
         grid-template-areas:
