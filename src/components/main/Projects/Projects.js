@@ -1,4 +1,5 @@
 import BGText from "../../common/BGText/BGText.js";
+import Projectcard from "./ProjectCard.js";
 import Title from "../../common/Text/Title.js";
 import styled from "styled-components";
 
@@ -18,13 +19,20 @@ const ProjectsBGT = styled(BGText)`
     & span {
         font-size: 0.565em;
     }
-
 `;
 
 const ProjectsTitle = styled(Title)`
     color: var(--color-primary-1);
     position: absolute;
     font-size: 1.065em;
+`;
+
+const ProjectsContent = styled.section`
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 1fr;
+    grid-auto-flow: column;
+    height: 4.75em;
 `;
 
 const Projects = () => {
@@ -34,6 +42,9 @@ const Projects = () => {
 				<ProjectsBGT cols={1} rows={3} text={"AND HERE ARE SOME OF MY"}/>
 				<ProjectsTitle>PROJECTS</ProjectsTitle>
 			</ProjectsHeader>
+			<ProjectsContent>
+				<Projectcard></Projectcard>
+			</ProjectsContent>
 		</ProjectsContainer>
 	);
 };
