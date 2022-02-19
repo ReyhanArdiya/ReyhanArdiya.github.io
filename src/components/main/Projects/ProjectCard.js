@@ -36,7 +36,7 @@ const ProjectDesc = styled(TextP)`
     background: var(--color-primary-2);
 `;
 
-const Projectcard = () => {
+const ProjectCard = () => {
 	return (
 		<ProjectCardContainer>
 			<ProjectIframe />
@@ -49,4 +49,5 @@ const Projectcard = () => {
 	);
 };
 
-export default Projectcard;
+
+export default ProjectCard;

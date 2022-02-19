@@ -1,5 +1,5 @@
 import BGText from "../../common/BGText/BGText.js";
-import Projectcard from "./ProjectCard.js";
+import ProjectCard from "./ProjectCard.js";
 import Title from "../../common/Text/Title.js";
 import styled from "styled-components";
 
@@ -45,7 +45,7 @@ const Projects = () => {
 				<ProjectsTitle>PROJECTS</ProjectsTitle>
 			</ProjectsHeader>
 			<ProjectsContent>
-				<Projectcard></Projectcard>
+				<ProjectCard></ProjectCard>
 				{/* <Projectcard></Projectcard> */}
 			</ProjectsContent>
 		</ProjectsContainer>
