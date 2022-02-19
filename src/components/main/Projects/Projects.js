@@ -30,7 +30,7 @@ const ProjectsTitle = styled(Title)`
 const ProjectsContent = styled.section`
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-auto-rows: 1fr;
+    grid-auto-rows: minmax(0px, 1fr);
     grid-auto-flow: column;
     height: 4.75em;
     width: 100%;
@@ -45,7 +45,7 @@ const Projects = () => {
 				<ProjectsTitle>PROJECTS</ProjectsTitle>
 			</ProjectsHeader>
 			<ProjectsContent>
-				<ProjectCard></ProjectCard>
+				<ProjectCard iframe="https://reyhanardiya.github.io/role-randomizer/" title="Role Randomizer">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis, ab, voluptas eveniet earum maiores, consequatur voluptatum expedita impedit officia minima iure quidem aperiam unde adipisci cupiditate porro dolore dolores! Aspernatur.</ProjectCard>
 				{/* <Projectcard></Projectcard> */}
 			</ProjectsContent>
 		</ProjectsContainer>
