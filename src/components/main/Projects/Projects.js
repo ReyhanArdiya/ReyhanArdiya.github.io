@@ -45,8 +45,8 @@ const Projects = () => {
 				<ProjectsTitle>PROJECTS</ProjectsTitle>
 			</ProjectsHeader>
 			<ProjectsContent>
-				<ProjectCard iframe="https://reyhanardiya.github.io/role-randomizer/" title="Role Randomizer">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis, ab, voluptas eveniet earum maiores, consequatur voluptatum expedita impedit officia minima iure quidem aperiam unde adipisci cupiditate porro dolore dolores! Aspernatur.</ProjectCard>
-				{/* <Projectcard></Projectcard> */}
+				<ProjectCard iframe="https://reyhanardiya.github.io/role-randomizer/" BGText="Role Randomizer" title="R R">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis, ab, voluptas eveniet earum maiores, consequatur voluptatum expedita impedit officia minima iure quidem aperiam unde adipisci cupiditate porro dolore dolores! Aspernatur.</ProjectCard>
+				<ProjectCard iframe="https://reyhanardiya.github.io/role-randomizer/" BGText="VIXUN" title="VIXUN">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis, ab, voluptas eveniet earum maiores, consequatur voluptatum expedita impedit officia minima iure quidem aperiam unde adipisci cupiditate porro dolore dolores! Aspernatur.</ProjectCard>
 			</ProjectsContent>
 		</ProjectsContainer>
 	);

@@ -39,23 +39,45 @@ const ProjectIframe = styled.iframe`
 const ProjectHeader = styled.header`
     grid-area: header;
     background: var(--color-primary-1);
+    align-items: center;
+    display: flex;
+    justify-content: stretch;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
 `;
 
-const ProjectBGT = styled(BGText)``;
+const ProjectBGT = styled(BGText)`
+    position: absolute;
+`;
 
-const ProjectTitle = styled(Title)``;
+const ProjectTitle = styled(Title)`
+    font-size: 0.5em;
+    color: var(--color-accent-1);
+    text-align: center;
+    width: 100%;
+    z-index: 2;
+`;
 
 const ProjectDesc = styled(TextP)`
     grid-area: desc;
     background: var(--color-primary-2);
+    font-size: 0.25em;
+    text-align: left;
+    overflow-y: auto;
+    padding: 0.5em 1em;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
 `;
 
-const ProjectCard = ({ children: desc, title, iframe }) => {
+const ProjectCard = ({ children: desc, BGText, title, iframe }) => {
 	return (
 		<ProjectCardContainer>
 			<ProjectIframe src={iframe} title={title} />
 			<ProjectHeader>
-				<ProjectBGT />
+				<ProjectBGT cols={7} rows={5} text={BGText} />
 				<ProjectTitle>{title}</ProjectTitle>
 			</ProjectHeader>
 			<ProjectDesc>{desc}</ProjectDesc>
@@ -64,6 +86,7 @@ const ProjectCard = ({ children: desc, title, iframe }) => {
 };
 
 ProjectCard.propTypes = {
+	BGText   : PropTypes.string,
 	children : PropTypes.string,
 	iframe   : PropTypes.string.isRequired,
 	title    : PropTypes.string.isRequired
