@@ -5,6 +5,7 @@ import Experiences from "./main/Experiences/Experiences.js";
 import Intro from "./main/Intro/Intro.js";
 import Motto from "./main/Motto/Motto.js";
 import Navbar from "./main/Navbar/Navbar.js";
+import Projects from "./main/Projects/Projects.js";
 // import { v4 as uuidv4 } from "uuid";
 
 const navbarLinks = [
@@ -26,7 +27,6 @@ const navbarLinks = [
 	}
 ];
 
-
 const App = () => {
 	return (
 		<div className="App">
@@ -35,6 +35,7 @@ const App = () => {
 			<About />
 			<Motto />
 			<Experiences />
+			<Projects />
 		</div>
 	);
 };
