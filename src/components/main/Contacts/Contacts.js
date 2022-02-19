@@ -15,8 +15,20 @@ const ContactsIntro = styled(Subtitle)`
 
 const ContactsContent = styled.section`
     width: 100%;
-    background-color: red;
     height: 100%;
+    display: grid;
+    grid-template-areas: "form links";
+    grid-template-columns: 0.58fr 0.42fr;
+`;
+
+const ContactsForm = styled.form`
+    grid-area: form;
+    background: var(--color-primary-1);
+`;
+
+const ContactsLinks = styled.section`
+    grid-area: links;
+    background: var(--color-primary-2);
 `;
 
 const Contacts = ({ propsDestruct }) => {
@@ -24,7 +36,8 @@ const Contacts = ({ propsDestruct }) => {
 		<ContactsContainer id="contacts">
 			<ContactsIntro>If you want to contact me...</ContactsIntro>
 			<ContactsContent>
-
+				<ContactsForm></ContactsForm>
+				<ContactsLinks></ContactsLinks>
 			</ContactsContent>
 		</ContactsContainer>
 	);
