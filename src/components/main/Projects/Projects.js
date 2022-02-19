@@ -52,8 +52,8 @@ const Projects = () => {
 				<ProjectsTitle>PROJECTS</ProjectsTitle>
 			</ProjectsHeader>
 			<ProjectsContent>
-				<ProjectCard iframe="https://reyhanardiya.github.io/role-randomizer/" BGText="Role Randomizer" title="R R">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis, ab, voluptas eveniet earum maiores, consequatur voluptatum expedita impedit officia minima iure quidem aperiam unde adipisci cupiditate porro dolore dolores! Aspernatur.</ProjectCard>
-				<ProjectCard iframe="https://reyhanardiya.github.io/role-randomizer/" BGText="VIXUN" title="VIXUN">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis, ab, voluptas eveniet earum maiores, consequatur voluptatum expedita impedit officia minima iure quidem aperiam unde adipisci cupiditate porro dolore dolores! Aspernatur. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni molestias, cum iure laborum, pariatur quisquam neque totam veritatis esse incidunt iste qui dolore facilis nihil commodi, explicabo impedit nulla omnis?</ProjectCard>
+				<ProjectCard iframe="https://vixun.herokuapp.com/" BGText="VIXUN" title="VIXUN">VIXUN is a website where you can search songs and shows you the song's link on Spotify, Deezer and Amazon Music. It aggregates data from Spotify's dan Deezer's API into one and scrapes the album's price from Amazon. Users can sign up for a local account that allows them to favorite and comment on every song.</ProjectCard>
+				<ProjectCard iframe="https://reyhanardiya.github.io/role-randomizer/" BGText="Role Randomizer" title="R R">Role Randomizer is a website where you can randomizer roles for assignments. You can list names, roles and their quotas then it will randomize what assignment each member will get.</ProjectCard>
 			</ProjectsContent>
 		</ProjectsContainer>
 	);
