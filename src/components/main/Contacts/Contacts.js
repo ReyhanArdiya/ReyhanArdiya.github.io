@@ -46,16 +46,24 @@ const ContactsInput = styled.input`
     background-color: var(--color-accent-1);
     border: none;
     outline: none;
-    border-radius: 5px;
+    border-radius: 0.35em;
     padding: 0.25em 0.5em;
     font: 0.45em "Archivo Narrow";
 `;
 
+const ContactsTextArea = styled(ContactsInput).attrs({ as : "textarea" })`
+    resize: none;
+`;
+
 const ContactsFormControl = ({ children: labelTitle, type, name }) => {
+	const Input = type !== "textarea" ?
+		<ContactsInput type="text" id={name} /> :
+		<ContactsTextArea rows={6} id={name} />;
+
 	return (
 		<ContactsFormControlContainer>
 			<Subtitle as="label" htmlFor={name}>{labelTitle}</Subtitle>
-			<ContactsInput type="text" id={name}/>
+			{Input}
 		</ContactsFormControlContainer>
 	);
 };
@@ -66,13 +74,14 @@ ContactsFormControl.propTypes = {
 	type     : PropTypes.string.isRequired,
 };
 
+
 const SubmitButt = styled(Title).attrs({ as : "button" })`
     background: var(--color-primary-2);
     color: var(--color-accent-1);
     border: none;
     outline: none;
     padding: 0;
-    border-radius: 5px;
+    border-radius: 0.35em;
     text-align: center;
     padding: 0.25em 0.4em;
     padding-right: 0.1em;
@@ -91,7 +100,7 @@ const Contacts = () => {
 				<ContactsForm>
 					<ContactsFormControl type="text" name="name">Name</ContactsFormControl>
 					<ContactsFormControl type="text" name="email">Email</ContactsFormControl>
-					<ContactsFormControl type="text" name="mEssage">Message</ContactsFormControl>
+					<ContactsFormControl type="textarea" name="mEssage">Message</ContactsFormControl>
 					<SubmitButt>SEND</SubmitButt>
 				</ContactsForm>
 				<ContactsLinks></ContactsLinks>
