@@ -88,7 +88,7 @@ const SubmitButt = styled(Title).attrs({ as : "button" })`
 const ContactsForm = () => {
 	return (
 		<ContactsFormContainer>
-			<ContactsBGT left rows={2} cols={7} text="MESSAGE" />
+			<ContactsBGT rows={2} cols={7} text="MESSAGE" />
 			<ContactsFormControl type="text" name="name">Name</ContactsFormControl>
 			<ContactsFormControl type="text" name="email">Email</ContactsFormControl>
 			<ContactsFormControl type="textarea" name="mEssage">Message</ContactsFormControl>

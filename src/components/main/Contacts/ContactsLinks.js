@@ -1,4 +1,6 @@
+import BGText from "../../common/BGText/BGText.js";
 import ContactsList from "./ContactsList.js";
+import Title from "../../common/Text/Title.js";
 import styled from "styled-components";
 
 const Container = styled.section`
@@ -9,6 +11,8 @@ const Container = styled.section`
         "list"
         "button";
     grid-template-rows: 1fr 1fr;
+    position: relative;
+    overflow: hidden;
 
     #button-home {
         justify-self: center;
@@ -45,6 +49,25 @@ const scrollToTop = () => {
 	});
 };
 
+const SideTitle = styled(Title)`
+    writing-mode: vertical-rl;
+    color: var(--color-accent-1);
+    position: absolute;
+    width: min-content;
+    height: max-content;
+    right: 8%;
+    bottom: 2%;
+    font-size: 0.4em;
+    z-index: 2;
+`;
+
+const BGT = styled(BGText)`
+    position: absolute;
+    z-index: 1;
+	writing-mode: vertical-rl;
+    right: 0;
+`;
+
 const ContactsLinks = () => {
 	return (
 		<Container>
@@ -53,6 +76,8 @@ const ContactsLinks = () => {
 				<rect x="23.1482" width="32.7365" height="32.7365" transform="rotate(45 23.1482 0)" fill="#EE2B47"/>
 				<path d="M24.6752 35.4089H21.6211V16.8694L15.5128 23.0492L12.4587 21.5043L23.1482 10.6895L33.8376 21.5043L30.7835 23.0492L24.6752 16.8694V35.4089Z" fill="#F6F6F6"/>
 			</svg>
+			<SideTitle>HERE YOU GO</SideTitle>
+			<BGT rows={2} cols={7} text="CONTACTS"/>
 		</Container>
 	);
 };
