@@ -1,6 +1,7 @@
 import "./App.css";
 import "./common/common.css";
 import About from "./main/About/About.js";
+import Contacts from "./main/Contacts/Contacts.js";
 import Experiences from "./main/Experiences/Experiences.js";
 import Intro from "./main/Intro/Intro.js";
 import Motto from "./main/Motto/Motto.js";
@@ -14,7 +15,7 @@ const navbarLinks = [
 		text : "HOME"
 	},
 	{
-		link : "#learned",
+		link : "#experiences",
 		text : "EXPERIENCES"
 	},
 	{
@@ -36,6 +37,7 @@ const App = () => {
 			<Motto />
 			<Experiences />
 			<Projects />
+			<Contacts />
 		</div>
 	);
 };
