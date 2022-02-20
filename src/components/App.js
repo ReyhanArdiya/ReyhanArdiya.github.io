@@ -15,7 +15,7 @@ const navbarLinks = [
 		text : "HOME"
 	},
 	{
-		link : "#learned",
+		link : "#experiences",
 		text : "EXPERIENCES"
 	},
 	{
