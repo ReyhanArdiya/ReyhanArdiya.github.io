@@ -29,6 +29,7 @@ const ContactsForm = styled.form`
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    padding: 0.25em 0;
 `;
 
 const ContactsFormControlContainer = styled.section`
@@ -85,6 +86,7 @@ const SubmitButt = styled(Title).attrs({ as : "button" })`
     text-align: center;
     padding: 0.25em 0.4em;
     padding-right: 0.1em;
+    font-size: 0.5em;
 `;
 
 const ContactsLinks = styled.section`
