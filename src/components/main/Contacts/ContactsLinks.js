@@ -18,6 +18,8 @@ const Container = styled.section`
         justify-self: center;
         align-self: center;
         cursor: pointer;
+		width: 2em;
+		height: 2em;
     }
 `;
 
