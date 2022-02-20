@@ -1,9 +1,10 @@
+import BGText from "../../common/BGText/BGText.js";
 import PropTypes from "prop-types";
 import Subtitle from "../../common/Text/Subtitle.js";
 import Title from "../../common/Text/Title.js";
 import styled from "styled-components";
 
-const ContactsFormEl = styled.form`
+const ContactsFormContainer = styled.form`
     grid-area: form;
     background: var(--color-primary-1);
     display: flex;
@@ -11,6 +12,20 @@ const ContactsFormEl = styled.form`
     justify-content: space-evenly;
     align-items: center;
     padding: 0.25em 0;
+    position: relative;
+    overflow: hidden;
+
+    *:not(.BGT) {
+        z-index: 2;
+    }
+`;
+
+const ContactsBGT = styled(BGText)`
+    position: absolute;
+    z-index: 1;
+	writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    left: 0;
 `;
 
 const ContactsFormControlContainer = styled.section`
@@ -72,12 +87,13 @@ const SubmitButt = styled(Title).attrs({ as : "button" })`
 
 const ContactsForm = () => {
 	return (
-		<ContactsFormEl>
+		<ContactsFormContainer>
+			<ContactsBGT left rows={2} cols={7} text="MESSAGE" />
 			<ContactsFormControl type="text" name="name">Name</ContactsFormControl>
 			<ContactsFormControl type="text" name="email">Email</ContactsFormControl>
 			<ContactsFormControl type="textarea" name="mEssage">Message</ContactsFormControl>
 			<SubmitButt>SEND</SubmitButt>
-		</ContactsFormEl>
+		</ContactsFormContainer>
 
 	);
 };
