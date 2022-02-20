@@ -16,18 +16,25 @@ const ContactsListContainer = styled.section`
         height: 100%;
         width: 100%;
     }
-    p {
+
+    a:nth-of-type(even) {
         justify-self: start;
         font-size: 0.25em;
         align-items: center;
         display: flex;
         justify-content: center;
+        text-decoration: none;
     }
 `;
 
 const ContactsList = ({ contacts }) => {
 	const list = contacts.flatMap(
-		({ svg, text }) => [ svg, <TextP>{text}</TextP> ]
+		({ link, svg, text }) => [
+			<a target={0} href={link}>{svg}</a>,
+			<a target={0} href={link}>
+				<TextP>{text}</TextP>
+			</a>
+		]
 	);
 
 	return (
