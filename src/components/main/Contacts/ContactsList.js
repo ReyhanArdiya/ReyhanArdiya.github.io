@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import TextP from "../../common/Text/TextP.js";
 import styled from "styled-components";
+import { v4 as uuidv4 } from "uuid";
 
 const ContactsListContainer = styled.section`
     grid-area: list;
@@ -30,8 +31,8 @@ const ContactsListContainer = styled.section`
 const ContactsList = ({ contacts }) => {
 	const list = contacts.flatMap(
 		({ link, svg, text }) => [
-			<a target={0} href={link}>{svg}</a>,
-			<a target={0} href={link}>
+			<a key={uuidv4()} target={0} href={link}>{svg}</a>,
+			<a key={uuidv4()} target={0} href={link}>
 				<TextP>{text}</TextP>
 			</a>
 		]
