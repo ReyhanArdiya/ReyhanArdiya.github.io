@@ -3,6 +3,7 @@ import BGText from "../../common/BGText/BGText.js";
 import styled from "styled-components";
 import { useInView } from "react-intersection-observer";
 
+// XXX yes there are duplicate code for the animations on each section but i was in a rush so sorry future me :P
 const Container = styled.section`
 	transition: all 0.4s ease-in;
 	transform: translateY(${({ visible }) => visible ? "0" : "1rem"});

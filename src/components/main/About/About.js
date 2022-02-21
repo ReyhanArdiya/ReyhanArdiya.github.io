@@ -2,6 +2,7 @@
 import BGText from "../../common/BGText/BGText.js";
 import TitleSideways from "../../common/Text/TitleSideways.js";
 import styled from "styled-components";
+import { useInView } from "react-intersection-observer";
 
 const AboutContainer = styled.section`
 	grid-area: about;
@@ -14,6 +15,9 @@ const AboutContainer = styled.section`
 	padding-right: 0.8em;
 	position: relative;
 	overflow: hidden;
+	transition: all 0.4s ease-in;
+	transform: translateY(${({ visible }) => visible ? "0" : "1rem"});
+	opacity: ${({ visible }) => visible ? "1" : "0"};
 
 	& .BGT {
 		font-size: 0.43em;
@@ -73,9 +77,19 @@ const AboutContainer = styled.section`
 	}
 `;
 
+let isAnimated = false;
 const About = () => {
+	const { ref, inView } = useInView({
+		root      : null,
+		threshold : 0.1
+	});
+
+	if (inView) {
+		isAnimated = true;
+	}
+
 	return (
-		<AboutContainer id="about">
+		<AboutContainer id="about" ref={ref} visible={isAnimated}>
 			<BGText cols={3} rows={3} text="WEB DEVELOPER" />
 			<TitleSideways id="about-header">Who am i</TitleSideways>
 			<section id="about-text">
