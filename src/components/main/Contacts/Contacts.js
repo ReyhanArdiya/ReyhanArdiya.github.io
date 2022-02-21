@@ -2,10 +2,14 @@ import ContactsForm from "./ContactsForm.js";
 import ContactsLinks from "./ContactsLinks.js";
 import Subtitle from "../../common/Text/Subtitle.js";
 import styled from "styled-components";
+import { useInView } from "react-intersection-observer";
 
 const ContactsContainer = styled.section`
     grid-area: contacts;
     width: 100%;
+    transition: all 0.4s ease-in;
+	transform: translateY(${({ visible }) => visible ? "0" : "1rem"});
+	opacity: ${({ visible }) => visible ? "1" : "0"};
 `;
 
 const ContactsIntro = styled(Subtitle)`
@@ -22,9 +26,19 @@ const ContactsContent = styled.section`
     grid-template-columns: 0.58fr 0.42fr;
 `;
 
+let isAnimated = false;
 const Contacts = () => {
+	const { ref, inView } = useInView({
+		root      : null,
+		threshold : 0.1
+	});
+
+	if (inView) {
+		isAnimated = true;
+	}
+
 	return (
-		<ContactsContainer id="contacts">
+		<ContactsContainer id="contacts" ref={ref} visible={isAnimated}>
 			<ContactsIntro>If you want to contact me...</ContactsIntro>
 			<ContactsContent>
 				<ContactsForm />
