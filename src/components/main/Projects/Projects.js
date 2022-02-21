@@ -2,13 +2,16 @@ import BGText from "../../common/BGText/BGText.js";
 import ProjectCard from "./ProjectCard.js";
 import Title from "../../common/Text/Title.js";
 import styled from "styled-components";
-
+import { useInView } from "react-intersection-observer";
 
 const ProjectsContainer = styled.section`
     grid-area: projects;
     display: flex;
     flex-direction: column;
     row-gap: 0.875em;
+    transition: all 0.4s ease-in;
+	transform: translateY(${({ visible }) => visible ? "0" : "1rem"});
+	opacity: ${({ visible }) => visible ? "1" : "0"};
 `;
 
 const ProjectsHeader = styled.header`
@@ -44,9 +47,19 @@ const ProjectsContent = styled.section`
     }
 `;
 
+let isAnimated = false;
 const Projects = () => {
+	const { ref, inView } = useInView({
+		root      : null,
+		threshold : 0.1
+	});
+
+	if (inView) {
+		isAnimated = true;
+	}
+
 	return (
-		<ProjectsContainer id="projects">
+		<ProjectsContainer id="projects" ref={ref} visible={isAnimated}>
 			<ProjectsHeader id="projects-header">
 				<ProjectsBGT cols={1} rows={3} text={"AND HERE ARE SOME OF MY"}/>
 				<ProjectsTitle>PROJECTS</ProjectsTitle>
