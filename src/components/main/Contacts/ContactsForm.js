@@ -2,7 +2,10 @@ import BGText from "../../common/BGText/BGText.js";
 import PropTypes from "prop-types";
 import Subtitle from "../../common/Text/Subtitle.js";
 import Title from "../../common/Text/Title.js";
+import emailjs from "@emailjs/browser";
 import styled from "styled-components";
+
+emailjs.init(process.env.REACT_APP_EMAILJS_USERID);
 
 const ContactsFormContainer = styled.form`
     grid-area: form;
@@ -54,8 +57,8 @@ const ContactsTextArea = styled(ContactsInput).attrs({ as : "textarea" })`
 
 const ContactsFormControl = ({ children: labelTitle, type, name }) => {
 	const Input = type !== "textarea" ?
-		<ContactsInput type="text" id={name} /> :
-		<ContactsTextArea rows={6} id={name} />;
+		<ContactsInput type="text" id={name} name={name}/> :
+		<ContactsTextArea rows={6} id={name} name={name}/>;
 
 	return (
 		<ContactsFormControlContainer>
@@ -83,15 +86,25 @@ const SubmitButt = styled(Title).attrs({ as : "button" })`
     padding: 0.25em 0.4em;
     padding-right: 0.1em;
     font-size: 0.5em;
+    cursor: pointer;
 `;
 
 const ContactsForm = () => {
+	const onSubmitHandler = async e => {
+		e.preventDefault();
+		await emailjs.sendForm(
+			process.env.REACT_APP_EMAILJS_SERVICEID,
+			process.env.REACT_APP_EMAILJS_TEMPLATEID,
+			e.target
+		);
+	};
+
 	return (
-		<ContactsFormContainer>
+		<ContactsFormContainer onSubmit={onSubmitHandler}>
 			<ContactsBGT rows={2} cols={7} text="MESSAGE" />
 			<ContactsFormControl type="text" name="name">Name</ContactsFormControl>
 			<ContactsFormControl type="text" name="email">Email</ContactsFormControl>
-			<ContactsFormControl type="textarea" name="mEssage">Message</ContactsFormControl>
+			<ContactsFormControl type="textarea" name="message">Message</ContactsFormControl>
 			<SubmitButt>SEND</SubmitButt>
 		</ContactsFormContainer>
 
