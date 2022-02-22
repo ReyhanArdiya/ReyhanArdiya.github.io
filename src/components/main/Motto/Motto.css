@@ -1,0 +1,41 @@
+#motto {
+	grid-area: motto;
+	font-size: 1.125em;
+	display: flex;
+	flex-direction: column;
+	row-gap: 0.5em;
+}
+
+#motto > p {
+	text-align: left;
+}
+
+#motto-text {
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	text-align: right;
+	display: flex;
+	flex-direction: column;
+	row-gap: 0.25em;
+}
+
+#motto .BGT {
+	position: absolute;
+}
+
+#motto .BGT-row {
+	column-gap: 0.14em;
+}
+
+#motto h2 {
+	align-self: flex-end;
+}
+
+#motto-text h3 {
+	font-size: 0.66667em;
+}
+
+#motto-text h3 span {
+	color: var(--color-primary-1);
+}

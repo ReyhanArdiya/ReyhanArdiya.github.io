@@ -127,7 +127,7 @@
 			}
 		],
 		"new-parens": ["warn", "always"],
-		"newline-per-chained-call": ["warn", { "ignoreChainWithDepth": 1 }],
+		"newline-per-chained-call": ["off", { "ignoreChainWithDepth": 1 }],
 		"no-duplicate-imports": "warn",
 		"no-empty-function": "warn",
 		"no-extra-parens": [
@@ -222,6 +222,7 @@
 		"prefer-template": "warn",
 		"quotes": ["warn", "double"],
 		"rest-spread-spacing": ["error", "never"],
+		"react/prop-types": "warn",
 		"semi": "error",
 		"semi-spacing": "error",
 		"semi-style": "error",

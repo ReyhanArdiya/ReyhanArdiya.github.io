@@ -1,0 +1,31 @@
+#navbar {
+	z-index: 10;
+	align-items: center;
+	column-gap: 2em;
+	display: flex;
+	font-size: 0.25em;
+	grid-area: navbar;
+	justify-content: flex-end;
+	padding: 1.5em 1.25em;
+	width: 100%;
+	/* position: fixed; */
+
+	/* background: linear-gradient(
+		180deg,
+		#ffffff 0%,
+		rgba(255, 255, 255, 0) 100%
+	); */
+}
+
+.navbar-link {
+	color: var(--color-text-1);
+	font-family: "Archivo Black";
+	text-align: center;
+	cursor: pointer;
+	text-decoration: none;
+	-webkit-tap-highlight-color: transparent;
+}
+
+.navbar-link-active {
+	color: var(--color-primary-1);
+}
