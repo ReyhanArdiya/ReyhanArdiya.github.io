@@ -74,7 +74,6 @@ ContactsFormControl.propTypes = {
 	type     : PropTypes.string.isRequired,
 };
 
-
 const SubmitButt = styled(Title).attrs({ as : "button" })`
     background: var(--color-primary-2);
     color: var(--color-accent-1);
@@ -89,14 +88,47 @@ const SubmitButt = styled(Title).attrs({ as : "button" })`
     cursor: pointer;
 `;
 
+const setCookie = (cName, cValue, expDays) => {
+	const date = new Date();
+	date.setTime(date.getTime() + (expDays * 24 * 60 * 60 * 1000));
+	const expires = `expires=${date.toUTCString()}`;
+	document.cookie = `${cName}=${cValue}; ${expires}; path=/`;
+};
+
+const getCookie = cName => {
+	const name = `${cName}=`;
+	const cDecoded = decodeURIComponent(document.cookie); // to be careful
+	const cArr = cDecoded.split("; ");
+	let res;
+	cArr.forEach(val => {
+		if (val.indexOf(name) === 0) {
+			res = val.substring(name.length);
+		}
+	});
+
+	return res;
+};
+
 const ContactsForm = () => {
 	const onSubmitHandler = async e => {
 		e.preventDefault();
-		await emailjs.sendForm(
-			process.env.REACT_APP_EMAILJS_SERVICEID,
-			process.env.REACT_APP_EMAILJS_TEMPLATEID,
-			e.target
-		);
+
+		if (!getCookie("submitted")) {
+			await emailjs.sendForm(
+				process.env.REACT_APP_EMAILJS_SERVICEID,
+				process.env.REACT_APP_EMAILJS_TEMPLATEID,
+				e.target
+			);
+
+			for (const inp of e.target.elements) {
+				inp.value = "";
+			}
+
+			setCookie("submitted", true, 7);
+			alert("sent!!");
+		} else {
+			alert("already submited!!");
+		}
 	};
 
 	return (
@@ -107,7 +139,6 @@ const ContactsForm = () => {
 			<ContactsFormControl type="textarea" name="message">Message</ContactsFormControl>
 			<SubmitButt>SEND</SubmitButt>
 		</ContactsFormContainer>
-
 	);
 };
 
