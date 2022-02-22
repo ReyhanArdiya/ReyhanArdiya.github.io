@@ -112,22 +112,29 @@ const getCookie = cName => {
 const ContactsForm = () => {
 	const onSubmitHandler = async e => {
 		e.preventDefault();
+		const { target, target: { elements: [ name, email, msg ] } } = e;
 
-		if (!getCookie("submitted")) {
+		if (getCookie("submitted")) {
+			alert("already submited!!");
+		} else if (
+			!name.value.trim() &&
+			!email.value.trim() &&
+			!msg.value.trim()
+		) {
+			alert("All inputs should be filled!");
+		} else {
 			await emailjs.sendForm(
 				process.env.REACT_APP_EMAILJS_SERVICEID,
 				process.env.REACT_APP_EMAILJS_TEMPLATEID,
-				e.target
+				target
 			);
 
-			for (const inp of e.target.elements) {
+			for (const inp of target.elements) {
 				inp.value = "";
 			}
 
 			setCookie("submitted", true, 7);
 			alert("sent!!");
-		} else {
-			alert("already submited!!");
 		}
 	};
 
