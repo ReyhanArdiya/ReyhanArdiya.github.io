@@ -1,0 +1,18 @@
+{
+    "workbench.colorCustomizations": {
+        "commandCenter.border": "#e7e7e799",
+        "sash.hoverBorder": "#ae0470",
+        "statusBar.background": "#7c0350",
+        "statusBar.foreground": "#e7e7e7",
+        "statusBarItem.hoverBackground": "#ae0470",
+        "statusBarItem.remoteBackground": "#7c0350",
+        "statusBarItem.remoteForeground": "#e7e7e7",
+        "tab.activeBorder": "#ae0470",
+        "titleBar.activeBackground": "#7c0350",
+        "titleBar.activeForeground": "#e7e7e7",
+        "titleBar.inactiveBackground": "#7c035099",
+        "titleBar.inactiveForeground": "#e7e7e799"
+    },
+    "peacock.color": "#7c0350",
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+}
